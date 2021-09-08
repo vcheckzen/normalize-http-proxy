@@ -1,0 +1,73 @@
+{
+  "inbounds": [
+    {
+      "tag": "bridge",
+      "protocol": "dokodemo-door",
+      "listen": "127.0.0.1",
+      "port": 1234,
+      "settings": {
+        "address": "1.1.1.1",
+        "port": 80,
+        "network": "tcp,udp",
+        "timeout": 30,
+        "followRedirect": true
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "127.0.0.1",
+            "port": 1234,
+            "users": [
+              {
+                "id": "1b62b985-cbb2-4437-9da0-4b88a8345b61",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.example.com"
+        },
+        "wsSettings": {
+          "path": "/example/path?ed=2048",
+          "headers": {
+            "Host": "www.example.com"
+          }
+        }
+      }
+    },
+    {
+      "tag": "np",
+      "protocol": "http",
+      "settings": {
+        "servers": [
+          {
+            "address": "127.0.0.1",
+            "port": 8888
+          }
+        ]
+      }
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "domainMatcher": "mph",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": "bridge",
+        "outboundTag": "np"
+      }
+    ]
+  }
+}
