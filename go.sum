@@ -60,6 +60,8 @@ github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSs
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/elazarl/goproxy v0.0.0-20210801061803-8e322dfb79c4 h1:lS3P5Nw3oPO05Lk2gFiYUOL3QPaH+fRoI1wFOc4G1UY=
 github.com/elazarl/goproxy v0.0.0-20210801061803-8e322dfb79c4/go.mod h1:Ro8st/ElPeALwNFlcTpWmkr6IoMFfkjXAvTHpevnDsM=
+github.com/elazarl/goproxy v0.0.0-20211114080932-d06c3be7c11b h1:1XqENn2YoYZd6w3Awx+7oa+aR87DFIZJFLF2n1IojA0=
+github.com/elazarl/goproxy v0.0.0-20211114080932-d06c3be7c11b/go.mod h1:Ro8st/ElPeALwNFlcTpWmkr6IoMFfkjXAvTHpevnDsM=
 github.com/elazarl/goproxy/ext v0.0.0-20190711103511-473e67f1d7d2 h1:dWB6v3RcOy03t/bUadywsbyrQwCqZeNIEX6M1OtSZOM=
 github.com/elazarl/goproxy/ext v0.0.0-20190711103511-473e67f1d7d2/go.mod h1:gNh8nYJoAm43RfaxurUnxr+N1PwuFV3ZMl/efxlIlY8=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
