@@ -14,7 +14,6 @@ type defaultLogger struct {
 
 func (l *defaultLogger) out(lvl string, v ...interface{}) {
 	l.Output(calldepth, prefix(lvl, fmt.Sprint(v...)))
-
 }
 
 func (l *defaultLogger) outf(lvl string, format string, v ...interface{}) {
