@@ -50,6 +50,9 @@ func NewUpstream(opts ...UpstreamOption) *Upstream {
 func (u *Upstream) setHeaders(r *http.Request) {
 	for k, v := range u.Headers {
 		r.Header.Set(k, v)
+		if strings.EqualFold(k, "Host") {
+			r.Host = v
+		}
 	}
 }
 
